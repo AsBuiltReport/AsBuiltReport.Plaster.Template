@@ -69,7 +69,10 @@ if ($Orientation -eq 'Portrait') {
 
 # <%= $PLASTER_PARAM_VendorName %> Logo Image
 if ($ReportConfig.Report.ShowCoverPageImage) {
-    Image -Text '<%= $PLASTER_PARAM_VendorName %> Logo' -Align 'Center' -Percent 5 -Base64 ""
+	# Always check the vendor's branding guidelines to ensure the use of their company logo is allowed.
+	# Convert a vendor's logo image to Base64 using https://base64.guru/converter/encode/image/jpg. 
+	# Specify Base64 code using the `Base64` parameter below. Size image accordingly using the `Percent` parameter. Align image to center.
+    # Image -Text '<%= $PLASTER_PARAM_VendorName %> Logo' -Align 'Center' -Percent 5 -Base64 ""
 }
 
 # Add Report Name
