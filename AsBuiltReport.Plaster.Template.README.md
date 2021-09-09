@@ -37,15 +37,18 @@ Please refer to the AsBuiltReport [website](https://www.asbuiltreport.com) for m
 Below are the instructions on how to install, configure and generate a <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built report.
 
 ## :floppy_disk: Supported Versions
+<!-- ********** Update supported <%= $PLASTER_PARAM_ProductName %> versions ********** -->
 The <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report supports the following <%= $PLASTER_PARAM_ProductName %> versions;
 
 ### PowerShell
 This report is compatible with the following PowerShell versions;
 
+<!-- ********** Update supported PowerShell versions ********** -->
 | Windows PowerShell 5.1 |     PowerShell 7    |
 |:----------------------:|:--------------------:|
 |   :white_check_mark:   | :white_check_mark: |
 ## :wrench: System Requirements
+<!-- ********** Update system requirements ********** -->
 PowerShell 5.1 or PowerShell 7, and the following PowerShell modules are required for generating a <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built report.
 
 - [<%= $PLASTER_PARAM_ModuleName %> Module](https://www.powershellgallery.com/packages/AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %>/)
@@ -57,12 +60,13 @@ PowerShell 5.1 or PowerShell 7, and the following PowerShell modules are require
 
 ❗ If you are unable to install .NET Core, you must set `ShowCoverPageImage` to `False` in the report JSON configuration file.
 ### :closed_lock_with_key: Required Privileges
-
+<!-- ********** Define required privileges ********** -->
+<!-- ********** Try to follow best practices to define least privileges ********** -->
 
 ## :package: Module Installation
 
 ### PowerShell
-
+<!-- ********** Add installation for any additional PowerShell module(s) ********** -->
 ```powershell
 install-module <%= $PLASTER_PARAM_ModuleName %>
 ```
@@ -130,3 +134,4 @@ There are 6 levels (0-5) of detail granularity for each section as follows;
 The **Healthcheck** schema is used to toggle health checks on or off.
 
 ## :computer: Examples
+<!-- ********** Add some examples. Use other AsBuiltReport modules as a guide. ********** -->
