@@ -49,7 +49,7 @@ This report is compatible with the following PowerShell versions;
 |   :white_check_mark:   | :white_check_mark: |
 ## :wrench: System Requirements
 <!-- ********** Update system requirements ********** -->
-PowerShell 5.1 or PowerShell 7, and the following PowerShell modules are required for generating a <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built report.
+PowerShell 5.1 or PowerShell 7, and the following PowerShell modules are required for generating a <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report.
 
 - [<%= $PLASTER_PARAM_ModuleName %> Module](https://www.powershellgallery.com/packages/AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %>/)
 
@@ -100,6 +100,7 @@ All report settings can then be configured via the JSON file.
 
 The following provides information of how to configure each schema within the report's JSON file.
 
+<!-- ********** DO NOT CHANGE THE REPORT SCHEMA SETTINGS ********** -->
 ### Report
 The **Report** schema provides configuration of the <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> report information.
 
@@ -116,6 +117,7 @@ The **Report** schema provides configuration of the <%= $PLASTER_PARAM_VendorNam
 ### Options
 The **Options** schema allows certain options within the report to be toggled on or off.
 
+<!-- ********** Add/Remove the number of InfoLevels as required ********** -->
 ### InfoLevel
 The **InfoLevel** schema allows configuration of each section of the report at a granular level. The following sections can be set.
 
