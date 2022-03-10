@@ -110,7 +110,7 @@
 		<file source='.github\workflows\PSScriptAnalyzerSettings.psd1'
 			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\PSScriptAnalyzerSettings.psd1' />
 
-        <file source='.github\workflows\Release.yml'
+        <templateFile source='.github\workflows\Release.yml'
 			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Release.yml' />
 
 		<templateFile source='AsBuiltReport.Plaster.Template.README.md'
