@@ -1,4 +1,4 @@
-# :arrows_counterclockwise: <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report Changelog
+# :arrows_clockwise: <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report Changelog
 
 ## [<%= $PLASTER_PARAM_Version %>] - YYYY-MM-DD
 
