@@ -17,10 +17,10 @@ jobs:
         shell: pwsh
         run: |
           Install-Module -Name AsBuiltReport.Core -Repository PSGallery -Force
-      - name: Install <%= $PLASTER_PARAM_ModuleName %> module
+      - name: Test Module Manifest
         shell: pwsh
         run: |
-          Install-Module -Name <%= $PLASTER_PARAM_ModuleName %> -Repository PSGallery -Force
+          Test-ModuleManifest .\<%= $PLASTER_PARAM_ModuleName %>.psd1
       - name: Publish module to PowerShell Gallery
         shell: pwsh
         run: |
