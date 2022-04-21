@@ -26,6 +26,7 @@ jobs:
         run: |
           Publish-Module -Path ./ -NuGetApiKey ${{ secrets.PSGALLERY_API_KEY }} -Verbose
   tweet:
+    needs: publish-to-gallery
     runs-on: ubuntu-latest
     steps:
       - uses: Eomm/why-don-t-you-tweet@v1
