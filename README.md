@@ -46,13 +46,16 @@ Destination path: C:\Users\tcarman\temp\
    Create AsBuiltReport.ACME.Widget\.github\workflows\
     Deploying common files
    Create AsBuiltReport.ACME.Widget\LICENSE
+   Create AsBuiltReport.ACME.Widget\.gitignore
    Create AsBuiltReport.ACME.Widget\AsBuiltReport.ACME.Widget.psm1
    Create AsBuiltReport.ACME.Widget\.vscode\settings.json
    Create AsBuiltReport.ACME.Widget\.github\PULL_REQUEST_TEMPLATE.md
-   Create AsBuiltReport.ACME.Widget\.github\ISSUE_TEMPLATE\bug_report.md
-   Create AsBuiltReport.ACME.Widget\.github\ISSUE_TEMPLATE\feature_request.md
+   Create AsBuiltReport.ACME.Widget\.github\ISSUE_TEMPLATE\bug_report.yml
+   Create AsBuiltReport.ACME.Widget\.github\ISSUE_TEMPLATE\change_request.yml
+   Create AsBuiltReport.ACME.Widget\.github\ISSUE_TEMPLATE\config.yml
    Create AsBuiltReport.ACME.Widget\.github\workflows\PSScriptAnalyzer.yml
    Create AsBuiltReport.ACME.Widget\.github\workflows\PSScriptAnalyzerSettings.psd1
+   Create AsBuiltReport.ACME.Widget\.github\workflows\Release.yml
    Create AsBuiltReport.ACME.Widget\README.md
    Create AsBuiltReport.ACME.Widget\CHANGELOG.md
    Create AsBuiltReport.ACME.Widget\AsBuiltReport.ACME.Widget.json

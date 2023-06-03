@@ -86,6 +86,9 @@
 		<file source='AsBuiltReport.Plaster.Template.LICENSE'
 			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
 
+        <file source='AsBuiltReport.Plaster.Template.gitignore'
+			destination='${PLASTER_PARAM_ModuleName}\.gitignore' />
+
 		<file source='AsBuiltReport.Plaster.Template.psm1'
 			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1' />
 
