@@ -23,6 +23,10 @@
     <a href="https://twitter.com/AsBuiltReport" alt="Twitter">
             <img src="https://img.shields.io/twitter/follow/AsBuiltReport.svg?style=social"/></a>
 </p>
+
+<p align="center">
+    <a href='https://ko-fi.com/B0B7DDGZ7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+</p>
 <!-- ********** DO NOT EDIT THESE LINKS ********** -->
 
 # <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report
@@ -56,12 +60,6 @@ PowerShell 5.1 or PowerShell 7, and the following PowerShell modules are require
 
 - [<%= $PLASTER_PARAM_ModuleName %> Module](https://www.powershellgallery.com/packages/AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %>/)
 
-### Linux & macOS
-* .NET Core is required for cover page image support on Linux and macOS operating systems.
-    * [Installing .NET Core for macOS](https://docs.microsoft.com/en-us/dotnet/core/install/macos)
-    * [Installing .NET Core for Linux](https://docs.microsoft.com/en-us/dotnet/core/install/linux)
-
-❗ If you are unable to install .NET Core, you must set `ShowCoverPageImage` to `False` in the report JSON configuration file.
 ### :closed_lock_with_key: Required Privileges
 <!-- ********** Define required privileges ********** -->
 <!-- ********** Try to follow best practices to define least privileges ********** -->

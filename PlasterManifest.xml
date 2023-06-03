@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <plasterManifest schemaVersion="1.1"
 	templateType="Project"
 	xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
@@ -44,17 +44,16 @@
 			store='text' />
 
 		<parameter name='PowerShellVersion'
-			default='5.1'
-			type='text'
-			prompt='Minimum PowerShell version' />
+            type='text'
+            store='text'
+            prompt='Minimum PowerShell version (5.1, 7.0, 7.1)'
+            default='5.1' />
 
 	</parameters>
 
 	<content>
 
-		<message>
-    Creating folder structure
-		</message>
+		<message>Creating folder structure</message>
 
 		<file source=''
 			destination='${PLASTER_PARAM_ModuleName}' />
@@ -82,9 +81,7 @@
 		<file source=''
 			destination='${PLASTER_PARAM_ModuleName}\.github\workflows' />
 
-		<message>
-    Deploying common files
-		</message>
+		<message>Deploying common files</message>
 
 		<file source='AsBuiltReport.Plaster.Template.LICENSE'
 			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
@@ -92,28 +89,7 @@
 		<file source='AsBuiltReport.Plaster.Template.psm1'
 			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1' />
 
-		<file source='.vscode\settings.json'
-			destination='${PLASTER_PARAM_ModuleName}\.vscode\settings.json' />
-
-		<file source='.github\PULL_REQUEST_TEMPLATE.md'
-			destination='${PLASTER_PARAM_ModuleName}\.github\PULL_REQUEST_TEMPLATE.md' />
-
-		<file source='.github\ISSUE_TEMPLATE\bug_report.md'
-			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\bug_report.md' />
-
-		<file source='.github\ISSUE_TEMPLATE\feature_request.md'
-			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\feature_request.md' />
-
-		<file source='.github\workflows\PSScriptAnalyzer.yml'
-			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\PSScriptAnalyzer.yml' />
-
-		<file source='.github\workflows\PSScriptAnalyzerSettings.psd1'
-			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\PSScriptAnalyzerSettings.psd1' />
-
-        <templateFile source='.github\workflows\Release.yml'
-			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Release.yml' />
-
-		<templateFile source='AsBuiltReport.Plaster.Template.README.md'
+        <templateFile source='AsBuiltReport.Plaster.Template.README.md'
 			destination='${PLASTER_PARAM_ModuleName}\README.md' />
 
 		<templateFile source='AsBuiltReport.Plaster.Template.CHANGELOG.md'
@@ -125,12 +101,34 @@
 		<templateFile source='AsBuiltReport.Plaster.Template.Style.ps1'
 			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.Style.ps1' />
 
+		<file source='.vscode\settings.json'
+			destination='${PLASTER_PARAM_ModuleName}\.vscode\settings.json' />
+
+		<file source='.github\PULL_REQUEST_TEMPLATE.md'
+			destination='${PLASTER_PARAM_ModuleName}\.github\PULL_REQUEST_TEMPLATE.md' />
+
+		<templateFile source='.github\ISSUE_TEMPLATE\bug_report.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\bug_report.yml' />
+
+		<templateFile source='.github\ISSUE_TEMPLATE\change_request.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\change_request.yml' />
+
+        <file source='.github\ISSUE_TEMPLATE\config.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\config.yml' />
+
+		<file source='.github\workflows\PSScriptAnalyzer.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\PSScriptAnalyzer.yml' />
+
+		<file source='.github\workflows\PSScriptAnalyzerSettings.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\PSScriptAnalyzerSettings.psd1' />
+
+        <templateFile source='.github\workflows\Release.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Release.yml' />
+
 		<templateFile source='Src\Public\Invoke-AsBuiltReport.Plaster.Template.ps1'
 			destination='${PLASTER_PARAM_ModuleName}\Src\Public\Invoke-${PLASTER_PARAM_ModuleName}.ps1' />
 
-		<message>
-    Creating Module Manifest
-		</message>
+		<message>Creating Module Manifest</message>
 
 		<newModuleManifest destination='AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}\AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}.psd1'
 			moduleVersion='$PLASTER_PARAM_Version'
