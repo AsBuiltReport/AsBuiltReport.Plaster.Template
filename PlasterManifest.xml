@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest schemaVersion="1.1"
+	templateType="Project"
+	xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+	<metadata>
+		<name>AsBuiltReport</name>
+		<id>62db4353-2f75-4510-b75a-d6d55d22e9af</id>
+		<version>1.0.0</version>
+		<title>AsBuiltReport Module Template</title>
+		<description>Scaffolds the files required for a new AsBuiltReport module</description>
+		<author>Tim Carman</author>
+		<tags>AsBuiltReport</tags>
+	</metadata>
+
+	<parameters>
+
+		<parameter name='VendorName'
+			type='text'
+			prompt='Enter the vendor name' />
+
+		<parameter name='ProductName'
+			type='text'
+			prompt='Enter the product name' />
+
+		<parameter name='ModuleName'
+			type='text'
+			prompt='Confirm the module name AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}'
+			default='AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}'
+			store='text' />
+
+		<parameter name='Description'
+			type='text'
+			default='A PowerShell module to generate an as built report on the configuration of ${PLASTER_PARAM_VendorName} ${PLASTER_PARAM_ProductName}.'
+			prompt='Brief description of module' />
+
+		<parameter name='Version'
+			type='text'
+			default='0.1.0'
+			prompt='Enter the version number of the module' />
+
+		<parameter name='Author'
+			type='user-fullname'
+			prompt="Module author's name"
+			store='text' />
+
+		<parameter name='PowerShellVersion'
+            type='text'
+            store='text'
+            prompt='Minimum PowerShell version (5.1, 7.0, 7.1)'
+            default='5.1' />
+
+	</parameters>
+
+	<content>
+
+		<message>Creating folder structure</message>
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\Samples' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\Src' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\Src\Public' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\Src\Private' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\.vscode' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\.github' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE' />
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows' />
+
+		<message>Deploying common files</message>
+
+		<file source='AsBuiltReport.Plaster.Template.LICENSE'
+			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
+
+		<file source='AsBuiltReport.Plaster.Template.psm1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1' />
+
+        <templateFile source='AsBuiltReport.Plaster.Template.README.md'
+			destination='${PLASTER_PARAM_ModuleName}\README.md' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.CHANGELOG.md'
+			destination='${PLASTER_PARAM_ModuleName}\CHANGELOG.md' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.json'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.json' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.Style.ps1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.Style.ps1' />
+
+		<file source='.vscode\settings.json'
+			destination='${PLASTER_PARAM_ModuleName}\.vscode\settings.json' />
+
+		<file source='.github\PULL_REQUEST_TEMPLATE.md'
+			destination='${PLASTER_PARAM_ModuleName}\.github\PULL_REQUEST_TEMPLATE.md' />
+
+		<templateFile source='.github\ISSUE_TEMPLATE\bug_report.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\bug_report.yml' />
+
+		<templateFile source='.github\ISSUE_TEMPLATE\change_request.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\change_request.yml' />
+
+        <file source='.github\ISSUE_TEMPLATE\config.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\config.yml' />
+
+		<file source='.github\workflows\PSScriptAnalyzer.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\PSScriptAnalyzer.yml' />
+
+		<file source='.github\workflows\PSScriptAnalyzerSettings.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\PSScriptAnalyzerSettings.psd1' />
+
+        <templateFile source='.github\workflows\Release.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Release.yml' />
+
+		<templateFile source='Src\Public\Invoke-AsBuiltReport.Plaster.Template.ps1'
+			destination='${PLASTER_PARAM_ModuleName}\Src\Public\Invoke-${PLASTER_PARAM_ModuleName}.ps1' />
+
+		<message>Creating Module Manifest</message>
+
+		<newModuleManifest destination='AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}\AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}.psd1'
+			moduleVersion='$PLASTER_PARAM_Version'
+			rootModule='AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}.psm1'
+			author='$PLASTER_PARAM_Author'
+			description='$PLASTER_PARAM_Description'
+			powerShellVersion='$PLASTER_PARAM_PowerShellVersion'
+			encoding='UTF8-NoBOM' />
+
+	</content>
+
+</plasterManifest>
