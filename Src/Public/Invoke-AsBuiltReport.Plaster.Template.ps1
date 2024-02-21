@@ -27,15 +27,19 @@ function Invoke-<%= $PLASTER_PARAM_ModuleName %> {
     Write-PScriboMessage -Plugin "Module" -Message "Issues or bug reporting: https://github.com/AsBuiltReport/AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %>/issues"
 
     # Check the current AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> module
-    $InstalledVersion = Get-Module -ListAvailable -Name AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> -ErrorAction SilentlyContinue | Sort-Object -Property Version -Descending | Select-Object -First 1 -ExpandProperty Version
+    Try {
+        $InstalledVersion = Get-Module -ListAvailable -Name AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> -ErrorAction SilentlyContinue | Sort-Object -Property Version -Descending | Select-Object -First 1 -ExpandProperty Version
 
-    if ($InstalledVersion) {
-        Write-PScriboMessage -Plugin "Module" -Message "AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> $($InstalledVersion.ToString()) is currently installed."
-        $LatestVersion = Find-Module -Name AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> -Repository PSGallery -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Version
-        if ($LatestVersion -gt $InstalledVersion) {
-            Write-PScriboMessage -Plugin "Module" -Message "AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> $($LatestVersion.ToString()) is available."
-            Write-PScriboMessage -Plugin "Module" -Message "Run 'Update-Module -Name AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> -Force' to install the latest version."
+        if ($InstalledVersion) {
+            Write-PScriboMessage -Plugin "Module" -Message "AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> $($InstalledVersion.ToString()) is currently installed."
+            $LatestVersion = Find-Module -Name AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> -Repository PSGallery -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Version
+            if ($LatestVersion -gt $InstalledVersion) {
+                Write-PScriboMessage -Plugin "Module" -Message "AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> $($LatestVersion.ToString()) is available."
+                Write-PScriboMessage -Plugin "Module" -Message "Run 'Update-Module -Name AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> -Force' to install the latest version."
+            }
         }
+    } Catch {
+        Write-PscriboMessage -Plugin "Module" -IsWarning $_.Exception.Message
     }
 
     # Import Report Configuration
