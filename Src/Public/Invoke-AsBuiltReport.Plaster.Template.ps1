@@ -21,7 +21,7 @@ function Invoke-<%= $PLASTER_PARAM_ModuleName %> {
         [PSCredential] $Credential
     )
 
-    Write-PScriboMessage -Plugin "Module" -Message "Please refer to the AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %> GitHub website for more detailed information about this project."
+    Write-PScriboMessage -Plugin "Module" -Message "Please refer to www.asbuiltreport.com for more detailed information about this project."
     Write-PScriboMessage -Plugin "Module" -Message "Do not forget to update your report configuration file after each new version release: https://www.asbuiltreport.com/user-guide/new-asbuiltreportconfig/"
     Write-PScriboMessage -Plugin "Module" -Message "Documentation: https://github.com/AsBuiltReport/AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %>"
     Write-PScriboMessage -Plugin "Module" -Message "Issues or bug reporting: https://github.com/AsBuiltReport/AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %>/issues"
