@@ -59,18 +59,6 @@
 			destination='${PLASTER_PARAM_ModuleName}' />
 
 		<file source=''
-			destination='${PLASTER_PARAM_ModuleName}\Samples' />
-
-		<file source=''
-			destination='${PLASTER_PARAM_ModuleName}\Src' />
-
-		<file source=''
-			destination='${PLASTER_PARAM_ModuleName}\Src\Public' />
-
-		<file source=''
-			destination='${PLASTER_PARAM_ModuleName}\Src\Private' />
-
-		<file source=''
 			destination='${PLASTER_PARAM_ModuleName}\.vscode' />
 
 		<file source=''
@@ -78,37 +66,44 @@
 
 		<file source=''
 			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE' />
+
 		<file source=''
 			destination='${PLASTER_PARAM_ModuleName}\.github\workflows' />
 
-		<message>Deploying common files</message>
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\Samples' />
 
-		<file source='AsBuiltReport.Plaster.Template.LICENSE'
-			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
+        <file source=''
+			destination='${PLASTER_PARAM_ModuleName}\Tests' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Src' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Src\Public' />
+
+		<file source=''
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Src\Private' />
+
+        <file source=''
+            destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Language\en-US' />
+
+		<message>Deploying common files</message>
 
         <file source='AsBuiltReport.Plaster.Template.gitignore'
 			destination='${PLASTER_PARAM_ModuleName}\.gitignore' />
-
-		<file source='AsBuiltReport.Plaster.Template.psm1'
-			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1' />
-
-        <templateFile source='AsBuiltReport.Plaster.Template.README.md'
-			destination='${PLASTER_PARAM_ModuleName}\README.md' />
-
-		<templateFile source='AsBuiltReport.Plaster.Template.CHANGELOG.md'
-			destination='${PLASTER_PARAM_ModuleName}\CHANGELOG.md' />
-
-		<templateFile source='AsBuiltReport.Plaster.Template.json'
-			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.json' />
-
-		<templateFile source='AsBuiltReport.Plaster.Template.Style.ps1'
-			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.Style.ps1' />
 
 		<file source='.vscode\settings.json'
 			destination='${PLASTER_PARAM_ModuleName}\.vscode\settings.json' />
 
 		<file source='.github\PULL_REQUEST_TEMPLATE.md'
 			destination='${PLASTER_PARAM_ModuleName}\.github\PULL_REQUEST_TEMPLATE.md' />
+
+        <templateFile source='.github\Dependabot.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\Dependabot.yml' />
+
+        <file source='.github\FUNDING.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\FUNDING.yml' />
 
 		<templateFile source='.github\ISSUE_TEMPLATE\bug_report.yml'
 			destination='${PLASTER_PARAM_ModuleName}\.github\ISSUE_TEMPLATE\bug_report.yml' />
@@ -128,18 +123,50 @@
         <templateFile source='.github\workflows\Release.yml'
 			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Release.yml' />
 
+        <templateFile source='.github\workflows\Stale.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Stale.yml' />
+
+		<file source='AsBuiltReport.Plaster.Template.LICENSE'
+			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
+
+        <templateFile source='AsBuiltReport.Plaster.Template.README.md'
+			destination='${PLASTER_PARAM_ModuleName}\README.md' />
+
+        <templateFile source='AsBuiltReport.Plaster.Template.SECURITY.md'
+            destination='${PLASTER_PARAM_ModuleName}\SECURITY.md' />
+
+        <templateFile source='AsBuiltReport.Plaster.Template.CODE_OF_CONDUCT.md'
+            destination='${PLASTER_PARAM_ModuleName}\CODE_OF_CONDUCT.md' />
+
+        <templateFile source='AsBuiltReport.Plaster.Template.CONTRIBUTING.md'
+            destination='${PLASTER_PARAM_ModuleName}\CONTRIBUTING.md' />
+
+        <templateFile source='AsBuiltReport.Plaster.Template.CHANGELOG.md'
+            destination='${PLASTER_PARAM_ModuleName}\CHANGELOG.md' />
+
+        <file source='AsBuiltReport.Plaster.Template.psm1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.json'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.json' />
+
 		<templateFile source='Src\Public\Invoke-AsBuiltReport.Plaster.Template.ps1'
-			destination='${PLASTER_PARAM_ModuleName}\Src\Public\Invoke-${PLASTER_PARAM_ModuleName}.ps1' />
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Src\Public\Invoke-${PLASTER_PARAM_ModuleName}.ps1' />
+
+        <templateFile source='Language\en-US\AsBuiltReportPlasterTemplate.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Language\en-US\AsBuiltReport${PLASTER_PARAM_VendorName}${PLASTER_PARAM_ProductName}.psd1' />
 
 		<message>Creating Module Manifest</message>
 
-		<newModuleManifest destination='AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}\AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}.psd1'
+		<newModuleManifest
+            destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
 			moduleVersion='$PLASTER_PARAM_Version'
-			rootModule='AsBuiltReport.${PLASTER_PARAM_VendorName}.${PLASTER_PARAM_ProductName}.psm1'
+			rootModule='${PLASTER_PARAM_ModuleName}.psm1'
 			author='$PLASTER_PARAM_Author'
 			description='$PLASTER_PARAM_Description'
 			powerShellVersion='$PLASTER_PARAM_PowerShellVersion'
-			encoding='UTF8-NoBOM' />
+			encoding='UTF8-NoBOM'
+        />
 
 	</content>
 

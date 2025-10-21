@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-    <a href='https://ko-fi.com/B0B7DDGZ7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+    <a href='https://ko-fi.com/B0B7DDGZ7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://ko-fi.com/img/githubbutton_sm.svg' border='0' alt='Want to keep alive this project? Support me on Ko-fi' /></a>
 </p>
 <!-- ********** DO NOT EDIT THESE LINKS ********** -->
 
@@ -51,9 +51,16 @@ The <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built 
 This report is compatible with the following PowerShell versions;
 
 <!-- ********** Update supported PowerShell versions ********** -->
-| Windows PowerShell 5.1 |     PowerShell 7    |
-|:----------------------:|:--------------------:|
+| Windows PowerShell 5.1 |    PowerShell 7    |
+|:----------------------:|:------------------:|
 |   :white_check_mark:   | :white_check_mark: |
+
+## 🗺️ Language Support
+<!-- ********** Update supported languages ********** -->
+The <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report supports the following languages;
+
+- English (US) (Default)
+
 ## :wrench: System Requirements
 <!-- ********** Update system requirements ********** -->
 PowerShell 5.1 or PowerShell 7, and the following PowerShell modules are required for generating a <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report.
@@ -112,15 +119,16 @@ The following provides information of how to configure each schema within the re
 ### Report
 The **Report** schema provides configuration of the <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> report information.
 
-| Sub-Schema          | Setting      | Default                        | Description                                                  |
-|---------------------|--------------|--------------------------------|--------------------------------------------------------------|
-| Name                | User defined | <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report | The name of the As Built Report                              |
-| Version             | User defined | 1.0                            | The report version                                           |
-| Status              | User defined | Released                       | The report release status                                    |
-| ShowCoverPageImage  | true / false | true                           | Toggle to enable/disable the display of the cover page image |
-| ShowTableOfContents | true / false | true                           | Toggle to enable/disable table of contents                   |
-| ShowHeaderFooter    | true / false | true                           | Toggle to enable/disable document headers & footers          |
-| ShowTableCaptions   | true / false | true                           | Toggle to enable/disable table captions/numbering            |
+| Sub-Schema          | Setting      | Default                                                                            | Description                                                                                     |
+|---------------------|--------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Name                | User defined | <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report | The name of the As Built Report                                                                 |
+| Version             | User defined | 1.0                                                                                | The report version                                                                              |
+| Status              | User defined | Released                                                                           | The report release status                                                                       |
+| Language            | User defined | en-US                                                                              | The default report language. This can be customised if the report module provides multilingual support |
+| ShowCoverPageImage  | true / false | true                                                                               | Toggle to enable/disable the display of the cover page image                                    |
+| ShowTableOfContents | true / false | true                                                                               | Toggle to enable/disable table of contents                                                      |
+| ShowHeaderFooter    | true / false | true                                                                               | Toggle to enable/disable document headers & footers                                             |
+| ShowTableCaptions   | true / false | true                                                                               | Toggle to enable/disable table captions/numbering                                               |
 
 ### Options
 The **Options** schema allows certain options within the report to be toggled on or off.
@@ -131,14 +139,14 @@ The **InfoLevel** schema allows configuration of each section of the report at a
 
 There are 6 levels (0-5) of detail granularity for each section as follows;
 
-| Setting | InfoLevel         | Description                                                                                                                                |
-|:-------:|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-|    0    | Disabled          | Does not collect or display any information                                                                                                |
-|    1    | Enabled / Summary | Provides summarised information for a collection of objects                                                                                |
-|    2    | Adv Summary       | Provides condensed, detailed information for a collection of objects                                                                       |
-|    3    | Detailed          | Provides detailed information for individual objects                                                                                       |
-|    4    | Adv Detailed      | Provides detailed information for individual objects, as well as information for associated objects                                        |
-|    5    | Comprehensive     | Provides comprehensive information for individual objects, such as advanced configuration settings                                         |
+| Setting | InfoLevel         | Description                                                                                         |
+|:-------:|-------------------|-----------------------------------------------------------------------------------------------------|
+|    0    | Disabled          | Does not collect or display any information                                                         |
+|    1    | Enabled / Summary | Provides summarised information for a collection of objects                                         |
+|    2    | Adv Summary       | Provides condensed, detailed information for a collection of objects                                |
+|    3    | Detailed          | Provides detailed information for individual objects                                                |
+|    4    | Adv Detailed      | Provides detailed information for individual objects, as well as information for associated objects |
+|    5    | Comprehensive     | Provides comprehensive information for individual objects, such as advanced configuration settings  |
 
 ### Healthcheck
 The **Healthcheck** schema is used to toggle health checks on or off.
