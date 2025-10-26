@@ -153,8 +153,8 @@
 		<templateFile source='Src\Public\Invoke-AsBuiltReport.Plaster.Template.ps1'
 			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Src\Public\Invoke-${PLASTER_PARAM_ModuleName}.ps1' />
 
-        <templateFile source='Language\en-US\AsBuiltReportPlasterTemplate.psd1'
-			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Language\en-US\AsBuiltReport${PLASTER_PARAM_VendorName}${PLASTER_PARAM_ProductName}.psd1' />
+        <templateFile source='Language\en-US\PlasterTemplate.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Language\en-US\${PLASTER_PARAM_VendorName}${PLASTER_PARAM_ProductName}.psd1' />
 
 		<message>Creating Module Manifest</message>
 
