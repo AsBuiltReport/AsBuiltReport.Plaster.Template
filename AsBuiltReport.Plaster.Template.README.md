@@ -53,7 +53,7 @@ This report is compatible with the following PowerShell versions;
 <!-- ********** Update supported PowerShell versions ********** -->
 | Windows PowerShell 5.1 |    PowerShell 7    |
 |:----------------------:|:------------------:|
-|   :white_check_mark:   | :white_check_mark: |
+|   :white_check_mark: or :x:  | :white_check_mark: or :x: |
 
 ## 🗺️ Language Support
 <!-- ********** Update supported languages ********** -->
@@ -150,6 +150,11 @@ There are 6 levels (0-5) of detail granularity for each section as follows;
 
 ### Healthcheck
 The **Healthcheck** schema is used to toggle health checks on or off.
+
+| Sub-Schema                      | Setting      | Default | Description                                                                  | Highlight                                                                                                   |
+|---------------------------------|--------------|---------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Schema1               | true / false | true    | Highlights objects which are in a critical state                          | ![Critical](https://place-hold.it/15/FEDDD7/FEDDD7.png) Critical state           |
+| Schema2| true / false | true    | Highlights objects which are in a warning state | ![Warning](https://place-hold.it/15/FFF4C7/FFF4C7.png) Warning state
 
 ## :computer: Examples
 <!-- ********** Add some examples. Use other AsBuiltReport modules as a guide. ********** -->

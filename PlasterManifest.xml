@@ -123,8 +123,14 @@
         <templateFile source='.github\workflows\Release.yml'
 			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Release.yml' />
 
+        <file source='.github\workflows\Pester.yml'
+			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Pester.yml' />
+
         <templateFile source='.github\workflows\Stale.yml'
 			destination='${PLASTER_PARAM_ModuleName}\.github\workflows\Stale.yml' />
+
+        <templateFile source='Tests\Invoke-Tests.ps1'
+			destination='${PLASTER_PARAM_ModuleName}\Tests\Invoke-Tests.ps1' />
 
 		<file source='AsBuiltReport.Plaster.Template.LICENSE'
 			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
