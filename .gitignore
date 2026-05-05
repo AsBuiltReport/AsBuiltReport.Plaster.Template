@@ -1,0 +1,16 @@
+# Claude Code
+.claude/
+
+# Temp / test output
+Temp/
+temp/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.suo
+*.user
