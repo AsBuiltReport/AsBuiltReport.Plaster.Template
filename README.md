@@ -35,7 +35,7 @@ Plaster will prompt for the following:
 | `Description` | Brief module description | Auto-generated |
 | `Version` | Initial module version | `0.1.0` |
 | `Author` | Module author name | Git config value |
-| `CompanyName` | Company or organization name (optional) | *(empty)* |
+| `CompanyName` | Company or organization name (press Enter to skip) | `Unknown` |
 | `PowerShellVersion` | Supported PowerShell edition(s) | `Windows PowerShell 5.1 only` |
 
 **PowerShell edition choices:**

@@ -45,8 +45,8 @@
 
 		<parameter name='CompanyName'
 			type='text'
-			default=''
-			prompt='Enter your company or organization name (optional)' />
+			default='Unknown'
+			prompt='Enter your company or organization name (leave blank for Unknown)' />
 
 		<parameter name='PowerShellVersion'
 			type='choice'

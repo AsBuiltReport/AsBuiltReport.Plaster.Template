@@ -28,7 +28,7 @@
     # Author of this module
     Author = '<%= $PLASTER_PARAM_Author %>'
 
-<% if ($PLASTER_PARAM_CompanyName) { %>
+<% if ($PLASTER_PARAM_CompanyName -ne 'Unknown') { %>
     # Company or vendor of this module
     CompanyName = '<%= $PLASTER_PARAM_CompanyName %>'
 <% } else { %>
