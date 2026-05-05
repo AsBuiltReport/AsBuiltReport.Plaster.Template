@@ -15,26 +15,16 @@
     ModuleVersion = '<%= $PLASTER_PARAM_Version %>'
 
     # Supported PSEditions
-<% if ($PLASTER_PARAM_PowerShellVersion -eq 'PS51') { %>
-    CompatiblePSEditions = @('Desktop')
-<% } elseif ($PLASTER_PARAM_PowerShellVersion -eq 'PS7') { %>
     CompatiblePSEditions = @('Core')
-<% } else { %>
-    CompatiblePSEditions = @('Desktop', 'Core')
-<% } %>
+
     # ID used to uniquely identify this module
     GUID = '<%= $PLASTER_GUID1 %>'
 
     # Author of this module
     Author = '<%= $PLASTER_PARAM_Author %>'
 
-<% if ($PLASTER_PARAM_CompanyName -ne 'Unknown') { %>
     # Company or vendor of this module
     CompanyName = '<%= $PLASTER_PARAM_CompanyName %>'
-<% } else { %>
-    # Company or vendor of this module
-    # CompanyName = 'Unknown'
-<% } %>
 
     # Copyright statement for this module
     Copyright = '(c) <%= $PLASTER_PARAM_Author %>. All rights reserved.'
@@ -43,11 +33,7 @@
     Description = '<%= $PLASTER_PARAM_Description %>'
 
     # Minimum version of the PowerShell engine required by this module
-<% if ($PLASTER_PARAM_PowerShellVersion -eq 'PS7') { %>
     PowerShellVersion = '7.0'
-<% } else { %>
-    PowerShellVersion = '5.1'
-<% } %>
 
     # Modules that must be imported into the global environment prior to importing this module
     RequiredModules = @(

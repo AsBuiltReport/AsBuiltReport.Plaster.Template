@@ -181,8 +181,17 @@
 
 		<message>Deploying module manifest and starter files</message>
 
-		<templateFile source='AsBuiltReport.Plaster.Template.psd1'
-			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1' />
+		<templateFile source='AsBuiltReport.Plaster.Template.PS7.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
+			condition='$PLASTER_PARAM_PowerShellVersion -eq "PS7"' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.PS51.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
+			condition='$PLASTER_PARAM_PowerShellVersion -eq "PS51"' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.PS51AndPS7.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
+			condition='$PLASTER_PARAM_PowerShellVersion -eq "PS51AndPS7"' />
 
 		<templateFile source='Src\Private\Get-AbrExample.ps1'
 			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Src\Private\Get-Abr${PLASTER_PARAM_VendorName}${PLASTER_PARAM_ProductName}Example.ps1' />
