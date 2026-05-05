@@ -50,7 +50,7 @@
 
 		<parameter name='PowerShellVersion'
 			type='choice'
-			default='0'
+			default='1'
 			prompt='Select the supported PowerShell edition(s)'>
 			<choice label='&amp;Windows PowerShell 5.1 only'
 				value='PS51'

@@ -67,7 +67,7 @@ Select the supported PowerShell edition(s):
   [W] Windows PowerShell 5.1 only
   [P] PowerShell 7+ only
   [A] Windows PowerShell 5.1 and PowerShell 7+
-  [?] Help (default is "W"): A
+  [?] Help (default is "P"): A
 Destination path: C:\Development
 
     Creating folder structure
