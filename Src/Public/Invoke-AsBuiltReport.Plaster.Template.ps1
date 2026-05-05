@@ -49,7 +49,7 @@ function Invoke-<%= $PLASTER_PARAM_ModuleName %> {
         # Check minimum InfoLevel before collecting data
         # if ($InfoLevel.Example -ge 1) {
         #     # Load localized strings
-        #     $reportTranslate = Import-LocalizedData -BaseDirectory ($PSScriptRoot + '\Language') `
+        #     $reportTranslate = Import-LocalizedData -BaseDirectory (Join-Path $PSScriptRoot '..\..\Language') `
         #         -FileName '<%= $PLASTER_PARAM_VendorName %><%= $PLASTER_PARAM_ProductName %>'
         #
         #     Section -Style Heading1 ($reportTranslate.GetAbrFunctionName.ParagraphDetail -f '<%= $PLASTER_PARAM_VendorName %>', '<%= $PLASTER_PARAM_ProductName %>') {
