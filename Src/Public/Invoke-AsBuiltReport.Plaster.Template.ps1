@@ -33,12 +33,30 @@ function Invoke-<%= $PLASTER_PARAM_ModuleName %> {
     # Used to set values to TitleCase where required
     $TextInfo = (Get-Culture).TextInfo
 
-	# Update/rename the $System variable and build out your code within the ForEach loop. The ForEach loop enables AsBuiltReport to generate an as built configuration against multiple defined targets.
-
-    #region foreach loop
+	#region foreach loop
     foreach ($System in $Target) {
 
+        #region Example Report Section
+        # --------------------------------------------------
+        # EXAMPLE: Replace with your own report sections.
+        # Rename Get-AbrExample to Get-Abr<VendorName><Component>
+        # and create the corresponding function in Src\Private\
+        # --------------------------------------------------
 
+        # Establish connection to target system
+        # $Connection = Connect-<VendorAPI> -Server $System -Credential $Credential
+
+        # Check minimum InfoLevel before collecting data
+        # if ($InfoLevel.Example -ge 1) {
+        #     # Load localized strings
+        #     $reportTranslate = Import-LocalizedData -BaseDirectory (Join-Path $PSScriptRoot '..\..\Language') `
+        #         -FileName '<%= $PLASTER_PARAM_VendorName %><%= $PLASTER_PARAM_ProductName %>'
+        #
+        #     Section -Style Heading1 ($reportTranslate.GetAbrFunctionName.ParagraphDetail -f '<%= $PLASTER_PARAM_VendorName %>', '<%= $PLASTER_PARAM_ProductName %>') {
+        #         Get-Abr<%= $PLASTER_PARAM_VendorName %><%= $PLASTER_PARAM_ProductName %>Example -Session $Connection -InfoLevel $InfoLevel.Example
+        #     }
+        # }
+        #endregion Example Report Section
 
 	}
 	#endregion foreach loop

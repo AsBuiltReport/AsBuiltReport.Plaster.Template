@@ -5,7 +5,7 @@
 	<metadata>
 		<name>AsBuiltReport</name>
 		<id>62db4353-2f75-4510-b75a-d6d55d22e9af</id>
-		<version>1.0.0</version>
+		<version>1.1.0</version>
 		<title>AsBuiltReport Module Template</title>
 		<description>Scaffolds the files required for a new AsBuiltReport module</description>
 		<author>Tim Carman</author>
@@ -43,11 +43,25 @@
 			prompt="Module author's name"
 			store='text' />
 
+		<parameter name='CompanyName'
+			type='text'
+			default='Unknown'
+			prompt='Enter your company or organization name (leave blank for Unknown)' />
+
 		<parameter name='PowerShellVersion'
-            type='text'
-            store='text'
-            prompt='Minimum PowerShell version (5.1, 7.0, 7.1)'
-            default='5.1' />
+			type='choice'
+			default='1'
+			prompt='Select the supported PowerShell edition(s)'>
+			<choice label='&amp;Windows PowerShell 5.1 only'
+				value='PS51'
+				help='Sets PowerShellVersion = 5.1 and CompatiblePSEditions = @(Desktop)' />
+			<choice label='&amp;PowerShell 7+ only'
+				value='PS7'
+				help='Sets PowerShellVersion = 7.0 and CompatiblePSEditions = @(Core)' />
+			<choice label='Windows PowerShell 5.1 &amp;and PowerShell 7+'
+				value='PS51AndPS7'
+				help='Sets PowerShellVersion = 5.1 and CompatiblePSEditions = @(Desktop, Core)' />
+		</parameter>
 
 	</parameters>
 
@@ -135,6 +149,9 @@
 		<file source='AsBuiltReport.Plaster.Template.LICENSE'
 			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
 
+        <file source='AsBuiltReport.Plaster.Template.AsBuiltReport.png'
+			destination='${PLASTER_PARAM_ModuleName}\AsBuiltReport.png' />
+
         <templateFile source='AsBuiltReport.Plaster.Template.README.md'
 			destination='${PLASTER_PARAM_ModuleName}\README.md' />
 
@@ -162,17 +179,25 @@
         <templateFile source='Language\en-US\PlasterTemplate.psd1'
 			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Language\en-US\${PLASTER_PARAM_VendorName}${PLASTER_PARAM_ProductName}.psd1' />
 
-		<message>Creating Module Manifest</message>
+		<message>Deploying module manifest and starter files</message>
 
-		<newModuleManifest
-            destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
-			moduleVersion='$PLASTER_PARAM_Version'
-			rootModule='${PLASTER_PARAM_ModuleName}.psm1'
-			author='$PLASTER_PARAM_Author'
-			description='$PLASTER_PARAM_Description'
-			powerShellVersion='$PLASTER_PARAM_PowerShellVersion'
-			encoding='UTF8-NoBOM'
-        />
+		<templateFile source='AsBuiltReport.Plaster.Template.PS7.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
+			condition='$PLASTER_PARAM_PowerShellVersion -eq "PS7"' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.PS51.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
+			condition='$PLASTER_PARAM_PowerShellVersion -eq "PS51"' />
+
+		<templateFile source='AsBuiltReport.Plaster.Template.PS51AndPS7.psd1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'
+			condition='$PLASTER_PARAM_PowerShellVersion -eq "PS51AndPS7"' />
+
+		<templateFile source='Src\Private\Get-AbrExample.ps1'
+			destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}\Src\Private\Get-Abr${PLASTER_PARAM_VendorName}${PLASTER_PARAM_ProductName}Example.ps1' />
+
+		<templateFile source='Tests\PlasterTemplate.Tests.ps1'
+			destination='${PLASTER_PARAM_ModuleName}\Tests\${PLASTER_PARAM_ModuleName}.Tests.ps1' />
 
 	</content>
 
