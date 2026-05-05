@@ -35,8 +35,8 @@ Plaster will prompt for the following:
 | `Description` | Brief module description | Auto-generated |
 | `Version` | Initial module version | `0.1.0` |
 | `Author` | Module author name | Git config value |
-| `CompanyName` | Company or organization name (press Enter to skip) | `Unknown` |
-| `PowerShellVersion` | Supported PowerShell edition(s) | `Windows PowerShell 5.1 only` |
+| `CompanyName` | Company or organization name (press Enter to use `Unknown`) | `Unknown` |
+| `PowerShellVersion` | Supported PowerShell edition(s) | `PowerShell 7+ only` |
 
 **PowerShell edition choices:**
 
@@ -62,7 +62,7 @@ Confirm the module name AsBuiltReport.Acme.Widget (AsBuiltReport.Acme.Widget):
 Brief description of module (A PowerShell module to generate an as built report on the configuration of Acme Widget.):
 Enter the version number of the module (0.1.0):
 Module author's name (Tim Carman):
-Enter your company or organization name (optional):
+Enter your company or organization name (leave blank for Unknown) (Unknown):
 Select the supported PowerShell edition(s):
   [W] Windows PowerShell 5.1 only
   [P] PowerShell 7+ only
@@ -129,7 +129,7 @@ AsBuiltReport.Acme.Widget\
 ├── AsBuiltReport.Acme.Widget\          ← module folder
 │   ├── Language\
 │   │   └── en-US\
-│   │       └── AcmeWidget.psd1         ← localised string stubs
+│   │       └── AcmeWidget.psd1         ← localized string stubs
 │   ├── Src\
 │   │   ├── Private\
 │   │   │   └── Get-AbrAcmeWidgetExample.ps1  ← starter private function
