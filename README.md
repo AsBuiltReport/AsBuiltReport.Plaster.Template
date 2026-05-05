@@ -56,10 +56,10 @@ Plaster will prompt for the following:
  |_|   |_|\__,_|___/\__\___|_|
                                             v1.1.3
 ==================================================
-Enter the vendor name: Acme
-Enter the product name: Widget
-Confirm the module name AsBuiltReport.Acme.Widget (AsBuiltReport.Acme.Widget):
-Brief description of module (A PowerShell module to generate an as built report on the configuration of Acme Widget.):
+Enter the vendor name: Vendor
+Enter the product name: Product
+Confirm the module name AsBuiltReport.Vendor.Product (AsBuiltReport.Vendor.Product):
+Brief description of module (A PowerShell module to generate an as built report on the configuration of Vendor Product.):
 Enter the version number of the module (0.1.0):
 Module author's name (Tim Carman):
 Enter your company or organization name (leave blank for Unknown) (Unknown):
@@ -71,45 +71,45 @@ Select the supported PowerShell edition(s):
 Destination path: C:\Development
 
     Creating folder structure
-   Create AsBuiltReport.Acme.Widget\
-   Create AsBuiltReport.Acme.Widget\Samples\
-   Create AsBuiltReport.Acme.Widget\Tests\
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\Src\
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\Src\Public\
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\Src\Private\
-   Create AsBuiltReport.Acme.Widget\.vscode\
-   Create AsBuiltReport.Acme.Widget\.github\
-   Create AsBuiltReport.Acme.Widget\.github\ISSUE_TEMPLATE\
-   Create AsBuiltReport.Acme.Widget\.github\workflows\
+   Create AsBuiltReport.Vendor.Product\
+   Create AsBuiltReport.Vendor.Product\Samples\
+   Create AsBuiltReport.Vendor.Product\Tests\
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\Src\
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\Src\Public\
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\Src\Private\
+   Create AsBuiltReport.Vendor.Product\.vscode\
+   Create AsBuiltReport.Vendor.Product\.github\
+   Create AsBuiltReport.Vendor.Product\.github\ISSUE_TEMPLATE\
+   Create AsBuiltReport.Vendor.Product\.github\workflows\
     Deploying common files
-   Create AsBuiltReport.Acme.Widget\LICENSE
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.png
-   Create AsBuiltReport.Acme.Widget\.gitignore
-   Create AsBuiltReport.Acme.Widget\README.md
-   Create AsBuiltReport.Acme.Widget\CHANGELOG.md
-   Create AsBuiltReport.Acme.Widget\.vscode\settings.json
-   Create AsBuiltReport.Acme.Widget\.github\PULL_REQUEST_TEMPLATE.md
-   Create AsBuiltReport.Acme.Widget\.github\ISSUE_TEMPLATE\bug_report.yml
-   Create AsBuiltReport.Acme.Widget\.github\ISSUE_TEMPLATE\change_request.yml
-   Create AsBuiltReport.Acme.Widget\.github\ISSUE_TEMPLATE\config.yml
-   Create AsBuiltReport.Acme.Widget\.github\workflows\PSScriptAnalyzer.yml
-   Create AsBuiltReport.Acme.Widget\.github\workflows\Release.yml
-   Create AsBuiltReport.Acme.Widget\.github\workflows\Pester.yml
-   Create AsBuiltReport.Acme.Widget\Tests\Invoke-Tests.ps1
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget.psm1
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget.json
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\Src\Public\Invoke-AsBuiltReport.Acme.Widget.ps1
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\Language\en-US\AcmeWidget.psd1
+   Create AsBuiltReport.Vendor.Product\LICENSE
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.png
+   Create AsBuiltReport.Vendor.Product\.gitignore
+   Create AsBuiltReport.Vendor.Product\README.md
+   Create AsBuiltReport.Vendor.Product\CHANGELOG.md
+   Create AsBuiltReport.Vendor.Product\.vscode\settings.json
+   Create AsBuiltReport.Vendor.Product\.github\PULL_REQUEST_TEMPLATE.md
+   Create AsBuiltReport.Vendor.Product\.github\ISSUE_TEMPLATE\bug_report.yml
+   Create AsBuiltReport.Vendor.Product\.github\ISSUE_TEMPLATE\change_request.yml
+   Create AsBuiltReport.Vendor.Product\.github\ISSUE_TEMPLATE\config.yml
+   Create AsBuiltReport.Vendor.Product\.github\workflows\PSScriptAnalyzer.yml
+   Create AsBuiltReport.Vendor.Product\.github\workflows\Release.yml
+   Create AsBuiltReport.Vendor.Product\.github\workflows\Pester.yml
+   Create AsBuiltReport.Vendor.Product\Tests\Invoke-Tests.ps1
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product.psm1
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product.json
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\Src\Public\Invoke-AsBuiltReport.Vendor.Product.ps1
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\Language\en-US\VendorProduct.psd1
     Deploying module manifest and starter files
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget.psd1
-   Create AsBuiltReport.Acme.Widget\AsBuiltReport.Acme.Widget\Src\Private\Get-AbrAcmeWidgetExample.ps1
-   Create AsBuiltReport.Acme.Widget\Tests\AsBuiltReport.Acme.Widget.Tests.ps1
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product.psd1
+   Create AsBuiltReport.Vendor.Product\AsBuiltReport.Vendor.Product\Src\Private\Get-AbrVendorProductExample.ps1
+   Create AsBuiltReport.Vendor.Product\Tests\AsBuiltReport.Vendor.Product.Tests.ps1
 ```
 
 ## Scaffolded Structure
 
 ```
-AsBuiltReport.Acme.Widget\
+AsBuiltReport.Vendor.Product\
 ├── .github\
 │   ├── ISSUE_TEMPLATE\
 │   │   ├── bug_report.yml
@@ -126,21 +126,21 @@ AsBuiltReport.Acme.Widget\
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── .vscode\
 │   └── settings.json
-├── AsBuiltReport.Acme.Widget\          ← module folder
+├── AsBuiltReport.Vendor.Product\          ← module folder
 │   ├── Language\
 │   │   └── en-US\
-│   │       └── AcmeWidget.psd1         ← localized string stubs
+│   │       └── VendorProduct.psd1         ← localized string stubs
 │   ├── Src\
 │   │   ├── Private\
-│   │   │   └── Get-AbrAcmeWidgetExample.ps1  ← starter private function
+│   │   │   └── Get-AbrVendorProductExample.ps1  ← starter private function
 │   │   └── Public\
-│   │       └── Invoke-AsBuiltReport.Acme.Widget.ps1
-│   ├── AsBuiltReport.Acme.Widget.json
-│   ├── AsBuiltReport.Acme.Widget.psd1  ← pre-populated module manifest
-│   └── AsBuiltReport.Acme.Widget.psm1
+│   │       └── Invoke-AsBuiltReport.Vendor.Product.ps1
+│   ├── AsBuiltReport.Vendor.Product.json
+│   ├── AsBuiltReport.Vendor.Product.psd1  ← pre-populated module manifest
+│   └── AsBuiltReport.Vendor.Product.psm1
 ├── Samples\
 ├── Tests\
-│   ├── AsBuiltReport.Acme.Widget.Tests.ps1  ← starter Pester 5 tests
+│   ├── AsBuiltReport.Vendor.Product.Tests.ps1  ← starter Pester 5 tests
 │   └── Invoke-Tests.ps1
 ├── AsBuiltReport.png
 ├── CHANGELOG.md
@@ -155,10 +155,10 @@ AsBuiltReport.Acme.Widget\
 
 After running `Invoke-Plaster`:
 
-1. **Add your data collection logic** — rename and populate `Get-AbrAcmeWidgetExample.ps1` in `Src\Private\`
-2. **Update the Invoke function** — wire up your private functions inside the `foreach ($System in $Target)` loop in `Src\Public\Invoke-AsBuiltReport.Acme.Widget.ps1`
-3. **Expand the report config** — add your sections to `AsBuiltReport.Acme.Widget.json` under `InfoLevel` and `HealthCheck`
-4. **Update the language file** — add string entries to `Language\en-US\AcmeWidget.psd1`
+1. **Add your data collection logic** — rename and populate `Get-AbrVendorProductExample.ps1` in `Src\Private\`
+2. **Update the Invoke function** — wire up your private functions inside the `foreach ($System in $Target)` loop in `Src\Public\Invoke-AsBuiltReport.Vendor.Product.ps1`
+3. **Expand the report config** — add your sections to `AsBuiltReport.Vendor.Product.json` under `InfoLevel` and `HealthCheck`
+4. **Update the language file** — add string entries to `Language\en-US\VendorProduct.psd1`
 5. **Update the README** — replace placeholder content in `README.md`
 6. **Initialise a git repository** — `git init`, add a remote, and push
 
