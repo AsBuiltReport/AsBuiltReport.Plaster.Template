@@ -17,20 +17,19 @@ function Get-Abr<%= $PLASTER_PARAM_VendorName %><%= $PLASTER_PARAM_ProductName %
         [int] $InfoLevel
     )
 
-    # Load localized strings
-    $reportTranslate = Import-LocalizedData -BaseDirectory (Join-Path $PSScriptRoot '..\..\Language') `
-        -FileName '<%= $PLASTER_PARAM_VendorName %><%= $PLASTER_PARAM_ProductName %>'
-
     try {
+        # Load localized strings
+        # $reportTranslate = Import-LocalizedData -BaseDirectory (Join-Path $PSScriptRoot '..\..\Language') `
+        #     -FileName '<%= $PLASTER_PARAM_VendorName %><%= $PLASTER_PARAM_ProductName %>'
+
         # Replace the line below with real data collection against your target system
         # $Data = Get-<VendorAPICommand> -Session $Session
 
-        if ($InfoLevel -ge 1) {
-            Section -Style Heading2 'Example Section' {
-                # Summary table (InfoLevel 1+)
-                # $Data | Table -Name 'Example' -List -ColumnWidths 50, 50
-            }
-        }
+        # if ($InfoLevel -ge 1) {
+        #     Section -Style Heading2 'Example Section' {
+        #         # $Data | Table -Name 'Example' -List -ColumnWidths 50, 50
+        #     }
+        # }
     } catch {
         Write-PScriboMessage -IsWarning $_.Exception.Message
     }
