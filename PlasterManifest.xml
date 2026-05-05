@@ -52,13 +52,13 @@
 			type='choice'
 			default='0'
 			prompt='Select the supported PowerShell edition(s)'>
-			<choice label='Windows PowerShell 5.1 only'
+			<choice label='&Windows PowerShell 5.1 only'
 				value='PS51'
 				help='Sets PowerShellVersion = 5.1 and CompatiblePSEditions = @(Desktop)' />
-			<choice label='PowerShell 7+ only'
+			<choice label='&PowerShell 7+ only'
 				value='PS7'
 				help='Sets PowerShellVersion = 7.0 and CompatiblePSEditions = @(Core)' />
-			<choice label='Windows PowerShell 5.1 and PowerShell 7+'
+			<choice label='Windows PowerShell 5.1 &and PowerShell 7+'
 				value='PS51AndPS7'
 				help='Sets PowerShellVersion = 5.1 and CompatiblePSEditions = @(Desktop, Core)' />
 		</parameter>
