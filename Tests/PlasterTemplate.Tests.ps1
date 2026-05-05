@@ -9,14 +9,16 @@ Describe '<%= $PLASTER_PARAM_ModuleName %>' {
 
     Context 'Module Manifest' {
 
+        BeforeAll {
+            $script:manifest = Test-ModuleManifest -Path (Join-Path $PSScriptRoot '..\<%= $PLASTER_PARAM_ModuleName %>\<%= $PLASTER_PARAM_ModuleName %>.psd1') -ErrorAction Stop
+        }
+
         It 'has a valid manifest' {
-            $manifest = Test-ModuleManifest -Path (Join-Path $PSScriptRoot '..\<%= $PLASTER_PARAM_ModuleName %>\<%= $PLASTER_PARAM_ModuleName %>.psd1') -ErrorAction Stop
-            $manifest | Should -Not -BeNullOrEmpty
+            $script:manifest | Should -Not -BeNullOrEmpty
         }
 
         It 'has the correct module name' {
-            $manifest = Test-ModuleManifest -Path (Join-Path $PSScriptRoot '..\<%= $PLASTER_PARAM_ModuleName %>\<%= $PLASTER_PARAM_ModuleName %>.psd1') -ErrorAction Stop
-            $manifest.Name | Should -Be '<%= $PLASTER_PARAM_ModuleName %>'
+            $script:manifest.Name | Should -Be '<%= $PLASTER_PARAM_ModuleName %>'
         }
 
     }
