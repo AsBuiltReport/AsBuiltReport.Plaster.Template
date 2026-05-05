@@ -26,7 +26,7 @@ Describe '<%= $PLASTER_PARAM_ModuleName %>' {
     Context 'Public Functions' {
 
         It 'exports Invoke-<%= $PLASTER_PARAM_ModuleName %>' {
-            $commands = Get-Command -Module '<%= $PLASTER_PARAM_ModuleName %>'
+            $commands = @(Get-Command -Module '<%= $PLASTER_PARAM_ModuleName %>')
             $commands.Name | Should -Contain 'Invoke-<%= $PLASTER_PARAM_ModuleName %>'
         }
 
