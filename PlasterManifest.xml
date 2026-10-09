@@ -149,9 +149,6 @@
 		<file source='AsBuiltReport.Plaster.Template.LICENSE'
 			destination='${PLASTER_PARAM_ModuleName}\LICENSE' />
 
-        <file source='AsBuiltReport.Plaster.Template.AsBuiltReport.png'
-			destination='${PLASTER_PARAM_ModuleName}\AsBuiltReport.png' />
-
         <templateFile source='AsBuiltReport.Plaster.Template.README.md'
 			destination='${PLASTER_PARAM_ModuleName}\README.md' />
 

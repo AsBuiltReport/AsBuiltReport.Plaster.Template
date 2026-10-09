@@ -83,7 +83,6 @@ Destination path: C:\Development
    Create AsBuiltReport.Vendor.Product\.github\workflows\
     Deploying common files
    Create AsBuiltReport.Vendor.Product\LICENSE
-   Create AsBuiltReport.Vendor.Product\AsBuiltReport.png
    Create AsBuiltReport.Vendor.Product\.gitignore
    Create AsBuiltReport.Vendor.Product\README.md
    Create AsBuiltReport.Vendor.Product\CHANGELOG.md
@@ -142,7 +141,6 @@ AsBuiltReport.Vendor.Product\
 ├── Tests\
 │   ├── AsBuiltReport.Vendor.Product.Tests.ps1  ← starter Pester 5 tests
 │   └── Invoke-Tests.ps1
-├── AsBuiltReport.png
 ├── CHANGELOG.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
