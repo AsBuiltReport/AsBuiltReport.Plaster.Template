@@ -83,7 +83,6 @@ Destination path: C:\Development
    Create AsBuiltReport.Vendor.Product\.github\workflows\
     Deploying common files
    Create AsBuiltReport.Vendor.Product\LICENSE
-   Create AsBuiltReport.Vendor.Product\AsBuiltReport.png
    Create AsBuiltReport.Vendor.Product\.gitignore
    Create AsBuiltReport.Vendor.Product\README.md
    Create AsBuiltReport.Vendor.Product\CHANGELOG.md
@@ -142,7 +141,6 @@ AsBuiltReport.Vendor.Product\
 ├── Tests\
 │   ├── AsBuiltReport.Vendor.Product.Tests.ps1  ← starter Pester 5 tests
 │   └── Invoke-Tests.ps1
-├── AsBuiltReport.png
 ├── CHANGELOG.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
@@ -161,5 +159,6 @@ After running `Invoke-Plaster`:
 4. **Update the language file** — add string entries to `Language\en-US\VendorProduct.psd1`
 5. **Update the README** — replace placeholder content in `README.md`
 6. **Initialise a git repository** — `git init`, add a remote, and push
+7. **Generate the README banner** — once the repo is public in the AsBuiltReport organisation, run the [Repo banners](https://github.com/AsBuiltReport/.github/actions/workflows/repo-banners.yml) workflow (or wait for its daily run) so the banner at the top of `README.md` exists
 
 Refer to existing AsBuiltReport modules such as [AsBuiltReport.VMware.vSphere](https://github.com/AsBuiltReport/AsBuiltReport.VMware.vSphere) or [AsBuiltReport.Microsoft.AD](https://github.com/AsBuiltReport/AsBuiltReport.Microsoft.AD) for implementation examples.

@@ -1,7 +1,7 @@
 <!-- ********** DO NOT EDIT THESE LINKS ********** -->
 <p align="center">
-    <a href="https://www.asbuiltreport.com/" alt="AsBuiltReport"></a>
-            <img src='https://github.com/AsBuiltReport.png' width="8%" height="8%" /></a>
+    <a href="https://www.asbuiltreport.com/">
+        <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/repo-banners/<%= $PLASTER_PARAM_ModuleName %>.png" alt="<%= $PLASTER_PARAM_ModuleName %>" width="880"></a>
 </p>
 <p align="center">
     <a href="https://www.powershellgallery.com/packages/<%= $PLASTER_PARAM_ModuleName %>/" alt="PowerShell Gallery Version">

@@ -70,7 +70,7 @@
             ProjectUri = 'https://github.com/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>'
 
             # A URL to an icon representing this module.
-            IconUri = 'AsBuiltReport.png'
+            # IconUri = ''
 
             # ReleaseNotes of this module
             ReleaseNotes = 'https://raw.githubusercontent.com/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>/master/CHANGELOG.md'
