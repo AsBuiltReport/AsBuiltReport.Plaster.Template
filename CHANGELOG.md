@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README section headings in a new module use the AsBuiltReport [section icons](https://github.com/AsBuiltReport/.github/tree/main/assets/section-icons) in place of emoji
 - README badges in a new module use the brand palette: link blue for the version, console blue for downloads and contributors, highlighter for the platform
 
+### Fixed
+
+- The HealthCheck example rows in a new module's README use the central [highlight swatches](https://github.com/AsBuiltReport/.github/tree/main/assets/highlight-swatches) in place of images from `place-hold.it`, which no longer load
+
 ### Removed
 
 - `AsBuiltReport.png` icon asset is no longer deployed to new modules

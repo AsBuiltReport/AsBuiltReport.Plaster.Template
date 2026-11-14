@@ -153,8 +153,8 @@ The **Healthcheck** schema is used to toggle health checks on or off.
 
 | Sub-Schema                      | Setting      | Default | Description                                                                  | Highlight                                                                                                   |
 |---------------------------------|--------------|---------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Schema1               | true / false | true    | Highlights objects which are in a critical state                          | ![Critical](https://place-hold.it/15/FEDDD7/FEDDD7.png) Critical state           |
-| Schema2| true / false | true    | Highlights objects which are in a warning state | ![Warning](https://place-hold.it/15/FFF4C7/FFF4C7.png) Warning state
+| Schema1               | true / false | true    | Highlights objects which are in a critical state                          | ![Critical](https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/highlight-swatches/FEDDD7.svg) Critical state           |
+| Schema2| true / false | true    | Highlights objects which are in a warning state | ![Warning](https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/highlight-swatches/FFF4C7.svg) Warning state
 
 ## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/examples.svg" alt="" width="24" height="24" align="top"> Examples
 <!-- ********** Add some examples. Use other AsBuiltReport modules as a guide. ********** -->
