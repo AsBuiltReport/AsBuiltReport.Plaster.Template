@@ -1,4 +1,7 @@
-# AsBuiltReport Plaster Template
+<p align="center">
+    <a href="https://www.asbuiltreport.com/">
+        <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/repo-banners/AsBuiltReport.Plaster.Template.png" alt="AsBuiltReport.Plaster.Template" width="880"></a>
+</p>
 
 A [Plaster](https://github.com/PowerShellOrg/Plaster) template that scaffolds the complete folder structure and starter files for a new [AsBuiltReport](https://github.com/AsBuiltReport/AsBuiltReport) module.
 
