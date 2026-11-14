@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - `IconUri` in the PSD1 manifest templates is now blank and commented out
+- The README of a new module now opens with its AsBuiltReport brand banner, rendered centrally in the [`.github`](https://github.com/AsBuiltReport/.github/tree/main/generator) repo, in place of the small organisation logo. The banner also links to the website, which the old logo did not.
 
 ### Removed
 
