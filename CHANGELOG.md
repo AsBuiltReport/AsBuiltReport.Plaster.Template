@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - `AsBuiltReport.png` icon asset is no longer deployed to new modules
+- The README of a new module no longer has a `<Vendor> <Product> As Built Report` title heading, which the banner repeats
+- The README of a new module no longer has the X (Twitter) follow @AsBuiltReport badge
 
 ## [1.1.0] - 2026-05-06
 

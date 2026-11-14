@@ -19,17 +19,11 @@
     <a href="https://github.com/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>/graphs/contributors" alt="GitHub Contributors">
         <img src="https://img.shields.io/github/contributors/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>.svg?color=012456"/></a>
 </p>
-<p align="center">
-    <a href="https://twitter.com/AsBuiltReport" alt="Twitter">
-            <img src="https://img.shields.io/twitter/follow/AsBuiltReport.svg?style=social"/></a>
-</p>
 
 <p align="center">
     <a href='https://ko-fi.com/B0B7DDGZ7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://ko-fi.com/img/githubbutton_sm.svg' border='0' alt='Want to keep alive this project? Support me on Ko-fi' /></a>
 </p>
 <!-- ********** DO NOT EDIT THESE LINKS ********** -->
-
-# <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report
 
 <!-- ********** REMOVE THIS MESSAGE WHEN THE MODULE IS FUNCTIONAL ********** -->
 ## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/in-development.svg" alt="" width="24" height="24" align="top"> THIS ASBUILTREPORT MODULE IS CURRENTLY IN DEVELOPMENT AND MIGHT NOT YET BE FUNCTIONAL
