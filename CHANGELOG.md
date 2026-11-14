@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `IconUri` in the PSD1 manifest templates is now blank and commented out
 - The README of a new module now opens with its AsBuiltReport brand banner, rendered centrally in the [`.github`](https://github.com/AsBuiltReport/.github/tree/main/generator) repo, in place of the small organisation logo. The banner also links to the website, which the old logo did not.
+- README section headings in a new module use the AsBuiltReport [section icons](https://github.com/AsBuiltReport/.github/tree/main/assets/section-icons) in place of emoji
+- README badges in a new module use the brand palette: link blue for the version, console blue for downloads and contributors, highlighter for the platform
 
 ### Removed
 

@@ -5,11 +5,11 @@
 </p>
 <p align="center">
     <a href="https://www.powershellgallery.com/packages/<%= $PLASTER_PARAM_ModuleName %>/" alt="PowerShell Gallery Version">
-        <img src="https://img.shields.io/powershellgallery/v/<%= $PLASTER_PARAM_ModuleName %>.svg" /></a>
+        <img src="https://img.shields.io/powershellgallery/v/<%= $PLASTER_PARAM_ModuleName %>.svg?color=1F5FD0" /></a>
     <a href="https://www.powershellgallery.com/packages/<%= $PLASTER_PARAM_ModuleName %>/" alt="PS Gallery Downloads">
-        <img src="https://img.shields.io/powershellgallery/dt/<%= $PLASTER_PARAM_ModuleName %>.svg" /></a>
+        <img src="https://img.shields.io/powershellgallery/dt/<%= $PLASTER_PARAM_ModuleName %>.svg?color=012456" /></a>
     <a href="https://www.powershellgallery.com/packages/<%= $PLASTER_PARAM_ModuleName %>/" alt="PS Platform">
-        <img src="https://img.shields.io/powershellgallery/p/<%= $PLASTER_PARAM_ModuleName %>.svg" /></a>
+        <img src="https://img.shields.io/powershellgallery/p/<%= $PLASTER_PARAM_ModuleName %>.svg?color=FFD02B" /></a>
 </p>
 <p align="center">
     <a href="https://github.com/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>/graphs/commit-activity" alt="GitHub Last Commit">
@@ -17,7 +17,7 @@
     <a href="https://raw.githubusercontent.com/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>/master/LICENSE" alt="GitHub License">
         <img src="https://img.shields.io/github/license/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>.svg" /></a>
     <a href="https://github.com/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>/graphs/contributors" alt="GitHub Contributors">
-        <img src="https://img.shields.io/github/contributors/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>.svg"/></a>
+        <img src="https://img.shields.io/github/contributors/AsBuiltReport/<%= $PLASTER_PARAM_ModuleName %>.svg?color=012456"/></a>
 </p>
 <p align="center">
     <a href="https://twitter.com/AsBuiltReport" alt="Twitter">
@@ -32,7 +32,7 @@
 # <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report
 
 <!-- ********** REMOVE THIS MESSAGE WHEN THE MODULE IS FUNCTIONAL ********** -->
-## :exclamation: THIS ASBUILTREPORT MODULE IS CURRENTLY IN DEVELOPMENT AND MIGHT NOT YET BE FUNCTIONAL ❗
+## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/in-development.svg" alt="" width="24" height="24" align="top"> THIS ASBUILTREPORT MODULE IS CURRENTLY IN DEVELOPMENT AND MIGHT NOT YET BE FUNCTIONAL
 
 <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report is a PowerShell module which works in conjunction with [AsBuiltReport.Core](https://github.com/AsBuiltReport/AsBuiltReport.Core).
 
@@ -40,10 +40,10 @@
 
 Please refer to the AsBuiltReport [website](https://www.asbuiltreport.com) for more detailed information about this project.
 
-# :beginner: Getting Started
+# <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/getting-started.svg" alt="" width="28" height="28" align="top"> Getting Started
 Below are the instructions on how to install, configure and generate a <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built report.
 
-## :floppy_disk: Supported Versions
+## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/supported-versions.svg" alt="" width="24" height="24" align="top"> Supported Versions
 <!-- ********** Update supported <%= $PLASTER_PARAM_ProductName %> versions ********** -->
 The <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report supports the following <%= $PLASTER_PARAM_ProductName %> versions;
 
@@ -55,23 +55,23 @@ This report is compatible with the following PowerShell versions;
 |:----------------------:|:------------------:|
 |   :white_check_mark: or :x:  | :white_check_mark: or :x: |
 
-## 🗺️ Language Support
+## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/language-support.svg" alt="" width="24" height="24" align="top"> Language Support
 <!-- ********** Update supported languages ********** -->
 The <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report supports the following languages;
 
 - English (US) (Default)
 
-## :wrench: System Requirements
+## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/system-requirements.svg" alt="" width="24" height="24" align="top"> System Requirements
 <!-- ********** Update system requirements ********** -->
 PowerShell 5.1 or PowerShell 7, and the following PowerShell modules are required for generating a <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report.
 
 - [<%= $PLASTER_PARAM_ModuleName %> Module](https://www.powershellgallery.com/packages/AsBuiltReport.<%= $PLASTER_PARAM_VendorName %>.<%= $PLASTER_PARAM_ProductName %>/)
 
-### :closed_lock_with_key: Required Privileges
+### <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/required-privileges.svg" alt="" width="20" height="20" align="top"> Required Privileges
 <!-- ********** Define required privileges ********** -->
 <!-- ********** Try to follow best practices to define least privileges ********** -->
 
-## :package: Module Installation
+## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/module-installation.svg" alt="" width="24" height="24" align="top"> Module Installation
 
 ### PowerShell
 <!-- ********** Add installation for any additional PowerShell module(s) ********** -->
@@ -97,7 +97,7 @@ If you are unable to use the PowerShell Gallery, you can still install the modul
 
 _Note: You are not limited to installing the module to those example paths, you can add a new entry to the environment variable PSModulePath if you want to use another path._
 
-## :pencil2: Configuration
+## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/configuration.svg" alt="" width="24" height="24" align="top"> Configuration
 
 The <%= $PLASTER_PARAM_VendorName %> <%= $PLASTER_PARAM_ProductName %> As Built Report utilises a JSON file to allow configuration of report information, options, detail and healthchecks.
 
@@ -156,5 +156,5 @@ The **Healthcheck** schema is used to toggle health checks on or off.
 | Schema1               | true / false | true    | Highlights objects which are in a critical state                          | ![Critical](https://place-hold.it/15/FEDDD7/FEDDD7.png) Critical state           |
 | Schema2| true / false | true    | Highlights objects which are in a warning state | ![Warning](https://place-hold.it/15/FFF4C7/FFF4C7.png) Warning state
 
-## :computer: Examples
+## <img src="https://raw.githubusercontent.com/AsBuiltReport/.github/main/assets/section-icons/examples.svg" alt="" width="24" height="24" align="top"> Examples
 <!-- ********** Add some examples. Use other AsBuiltReport modules as a guide. ********** -->
